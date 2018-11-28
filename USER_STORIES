@@ -1,0 +1,24 @@
+USER STORIES :
+
+1) NAVBAR : there should be a top navbar for the USER to get to different parts of the webpage
+
+2) NAVBAR: the style(font-color and border-bottom) on the links should be changed when USER hovers on them so that the user knows that they are links
+
+3) HEADER: choose font combinations that are easy to read with proper styling, simple but impactful,not too fancy
+
+4) HEADER : this section gives the USER information about me, a picture of me , my name below it and a description of who i am, to give a quick introduction to me
+
+5) MAIN : this section will have a carousal with my projects sliding on it with a delay of 3 seconds, long enough for the USER to get an idea of each project and fast enough to let the user know that there are more projects
+
+6) MAIN : each image on the carousal will be a screenshot of the project and the different technologies used in that project mentioned at the bottom of the screenshot . it showcases my work to the USER
+
+7) ARTICLE : this section will have testimonials to give an idea to the USER what peers and teachers think of me as a developer
+
+8) ASIDE : there will be a form in this section to get input from the USER
+
+9) ASIDE : apply validation on the form fields so that the USER cannot make a mistake and we get input data in the right format
+
+10) FOOTER : the USER can see my information in this section, name, phone, email on the left side and the social media links on the right
+
+
+ 
