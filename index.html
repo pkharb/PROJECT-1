@@ -15,16 +15,27 @@
 
 <nav>
     <div class="nav1">
-    <h1>WELCOME</h1>
+       <h1>WELCOME</h1>
     </div>
 
-    <div class="nav2">
-       <ul>
-           <li><a href="#about">ABOUT</a></li>
-           <li><a href="#portfolio">PORTFOLIO</a></li>
-           <li><a href="#quotes">QUOTES</a></li>
-           <li><a href="#contact">CONTACT</a></li>
-       </ul>
+    <div class="nav-show">
+        <ul>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#quotes">QUOTES</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </div>
+    <div class="nav-hide-bars">
+        <i class="fas fa-bars fa-2x"></i>
+    </div>
+    <div class="nav-hide">
+        <ul>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#quotes">QUOTES</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
     </div>
 </nav>
 <a name="about"></a>
@@ -57,10 +68,10 @@
             <img src="images/arrow-left.png" class="prev" alt="Previous">
 
             <div class="slider-inner">
-                <img src="images/space1.jpg" class="active">
-                <img src="images/space2.png">
-                <img src="images/space3.jpg">
-                <img src="images/blockchain.jpg">
+                <img src="images/space1.jpg" class="img active first">
+                <img src="images/space2.png" class="img">
+                <img src="images/space3.jpg" class="img">
+                <img src="images/blockchain.jpg" class="img last">
             </div>
 
             <img src="images/arrow-right.png" class="next" alt="Next">
@@ -71,18 +82,68 @@
 </main>
 
 <a name="quotes"></a>
-<article >
-    <div class="testi1">
+<article>
+
+    <div class="testhead">
        <h1>TESTIMONIALS</h1>
     </div>
-    <div class="testi2">
-        <blockquote>
-          <P>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, 
+
+    <div class="article-bottom">
+
+         <p class="quotes">
+            "1Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, 
              consectetur, adipisci velit..."
-          </P>
-        </blockquote>
-        <cite class="patron1">"Alex Rowland"</cite>
+         </p>
+         <cite class="writer">"1Alex Rowland"</cite>
+
+         <p class="quotes">
+            "2Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, 
+             consectetur, adipisci velit..."
+         </p>
+         <cite class="writer">"2Alex Rowland"</cite>
+
+         <p class="quotes">
+            "3Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, 
+             consectetur, adipisci velit..."
+         </p>
+         <cite class="writer">"3Alex Rowland"</cite>
+
     </div>
+
+    
+
+    <!-- <div class=".quotes">
+        <blockquote>
+         <p>
+          "1Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, 
+             consectetur, adipisci velit..."
+        </p>
+        </blockquote>
+        <cite class="p1">"Alex Rowland"</cite>
+    </div>
+
+    <div class=".quotes">
+
+        <blockquote>
+          <p class="q1">"2Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, 
+             consectetur, adipisci velit..."
+          </p>
+        </blockquote>
+        <cite class="p1">"2Alex Rowland"</cite>
+
+    </div>
+
+    <div class=".quotes">
+
+            <blockquote>
+                  <p class="q1">"3Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, 
+                 consectetur, adipisci velit..."
+              </p>
+            </blockquote>
+            <cite class="p1">"3Alex Rowland"</cite>
+
+        </div> -->
+
 </article>
 
 <a name="contact"></a>

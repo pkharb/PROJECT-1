@@ -30,19 +30,48 @@ nav{
     background: #2b363b;
     color: #fff;
     z-index: 1;
-    /* clear: both; */
+    clear: both;
 }
 nav h1{
     float: left;
-    padding-left: 15%;;
+    padding-left: 12%;;
     padding-top: 5px;
 }
-.nav2{
+.nav-show{
+    /* display: none; */
     float: right;
     width:400px;
     padding-top: 13px;
     padding-right: 150px;
 }
+.nav-show li{
+    list-style: none;
+    display: inline;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    padding-top: 5px; 
+    padding-left: 2%;
+}
+.nav-hide-bars{
+    display: none;
+}
+.nav-hide{
+    display: none;
+    /* background: #2b363b; */
+}
+.nav-hide{
+    float: right;
+    padding-right: 0;
+    padding: 5px;
+}
+.nav-hide li{
+    list-style: none;
+    display: block;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    padding: 5px; 
+}
+
 nav a{
     color: #fff;
     text-decoration: none;
@@ -51,15 +80,13 @@ nav a:hover{
     padding-bottom: 2px;
     border-bottom: 2px solid #00a97a;
 }
-nav li{
+/* nav li{
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
-    /* background: #ddd; */
     display: inline;
     list-style: none;
-    /* margin-right: 10%;  */
     padding-right: 10px;
-}
+} */
 header{
     padding-top: 75px;
     background: #00a97a;
@@ -155,7 +182,7 @@ main h1{
 } */
 .slider-inner img{
     display: none;
-    width: 900px;
+    width: 800px;
     height: 375px;
     
 }
@@ -163,6 +190,8 @@ main h1{
 .slider-inner img.active{
     display: inline-block;
 }
+
+
 .prev,.next{
     float: left;
     margin-top: 130px;
@@ -178,26 +207,56 @@ main h1{
     margin-left: -45px;
     z-index: 100;
 }
+
+
 /* can't get the flex model to work */
 article{
     background: #00a97a;
     color: #fff;
-}
-.testi1{
-    padding-top: 35px;
     text-align: center;
+    padding-top: 50px;
 }
-.testi1 h1{
-    /* font-weight: 800; can't make it as bold as i want */
+article h1{
+    padding-top: 50px;
     display: inline;
     padding: 15px 10px;
     border-bottom: 3px solid #fff;
 }
-.testi2{
+h1.testhead{
+    text-align: center;
+    /* display: inline; */
+    
+}
+.test1,.test2,.test3{
+    /* width: 60%; */
+    padding-top: 35px;
+    text-align: center;
+}
+.quotes{
+    padding: 50px 10px;
+    display: none;
+}
+.writer{
+    display: none;
+}
+.article-bottom{
+    padding-bottom: 70px;
+}
+/* .test1,.test2,.test3 h1{
+    /* font-weight: 800; can't make it as bold as i want 
+    display: inline;
+    padding: 15px 10px;
+    border-bottom: 3px solid #fff;
+} */
+/* .test2{
+    padding-top: 35px;
+    text-align: center;
+} */
+/* .test2{
     text-align: center;
     padding: 30px;
     margin: 25px 100px;
-}
+} */
 
 
 aside{
@@ -326,4 +385,168 @@ footer ul li{
 }
 footer a{
     color: #fff;;
+}
+
+/* RESPONSIVENESS */
+@media only screen and (max-width: 775px) {
+    nav{
+        width: 100%;
+        height: 100px;
+        
+    }
+    nav h1{
+        padding-left: 35%;;
+        padding-top: 2%;
+    }
+   
+    .nav-show{
+        display: none;
+    }
+    .nav-hide-bars{
+       
+        display: inline-block;
+        float: right;
+        margin-right: 2%;
+        margin-top: 5%;
+        /* position: fixed;
+        z-index: 1; */
+
+        
+    }
+    /* .nav-hide{
+        margin: 0;
+        padding: 5px;
+    } */
+    
+    .nav-hide-bars:hover ~ .nav-hide{
+        display: inline-block;
+        background: #2b363b;
+        /* float: right; */
+        /* margin-right: 2%; */
+        
+    }
+    /* .nav-hide-bars:hover ~ .nav-hide ul{
+        display: inline-block;
+    } */
+    .nav-hide:hover{
+        display: inline-block;
+        background: #2b363b;
+    }
+
+    .head-wrapper{
+        /* padding-top: 15px;  */
+    }
+
+    .top-img{
+        margin-top: 20px;
+        padding-top: 15px; 
+        position: relative;
+        left: 32%;
+        width: 35%;
+        display: block;
+        clear: both;
+        border-radius: 20px;
+    }
+
+    .head-text1 {
+        margin-top: 20px;
+        text-align: center;
+    }
+    .head-text1 h1{
+        font-size: 30px;
+        padding: 10px 10px;
+       
+    }
+    .head-text1 h3{
+        margin-top: 25px;
+    }
+    .head-text2 {
+        margin-top: 50px;
+        text-align: center;
+    }
+    .head-text2 h2{
+        display: inline;
+        padding-bottom: 15px;
+        border-bottom: 3px solid #fff;
+    }
+    .head-text2 p{
+        padding: 5px 5px 25px 5px;
+        margin: 25px 100px;
+    }
+    .quotes{
+        padding: 30px 20px;
+        display: none;
+    }
+    footer{
+        height: 125px;
+    }
+    footer h2{
+        /* float: left; */
+        text-align: center;
+        font-size: 14px;
+        padding-top: 5px;
+        /* padding-left: 1%; */
+        display: inline;
+    }
+    footer ul{
+        /* text-align: center; */
+        margin-right: 5px;
+        padding-top: 5px;
+    }
+    footer ul li{
+        /* text-align: center; */
+        list-style: none;
+        display: inline;
+        /* padding-left: 5px; */
+    }
+}
+    @media only screen and (max-width: 450px) {
+        nav h1{
+            padding-left: 35%;;
+            padding-top: 5%;
+        }
+        .nav-hide-bars{
+            margin-right: 2%;
+            margin-top: 8%;
+        }
+        .nav-hide{
+            padding: 0;
+        }
+        .nav-hide ul{
+            padding: 2px 0 0 5px;
+        }
+        .nav-hide li{
+            list-style: none;
+            display: block;
+            font-family: 'Raleway', sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 3px; 
+        }
+        .nav-hide a{
+            
+            padding-left: 0; 
+        }
+        footer h2{
+            /* float: left; */
+            text-align: center;
+            font-size: 14px;
+            padding-top: 5px;
+            /* padding-left: 1%; */
+            display: inline;
+        }
+        footer ul{
+            text-align: center;
+            /* float: right; */
+            margin-right: 130px;
+            padding-top: 2px;
+        }
+        footer ul li{
+            /* float: right; */
+            list-style: none;
+            display: inline;
+            /* padding-left: 5px; */
+    }
+
+
 }
