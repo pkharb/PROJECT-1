@@ -1,6 +1,27 @@
 $(document).ready(function(){
     
+
+    // FADE-IN, FADE-OUT FOR SLIDER IMAGES
+
+    // var imgShow = $(".img");
+    //     //console.log(quotes.length);
+    //     var imgIndex = -1;
     
+    //     function showNextImg() {
+    //         ++imgIndex;
+    //         imgShow.eq(imgIndex % imgShow.length)
+    //             // .fadeIn(2000)
+    //             .slide(2000)
+    //             .delay(2000)
+    //             .slide(2000, showNextImg);
+    //     }
+    
+    //     showNextImg();
+
+
+
+    
+    // NAVIGATION FOR SLIDER IMAGES
     var allImg = $('.img');
     $('.next').on('click', function(){
         
