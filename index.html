@@ -60,24 +60,36 @@
 
 <a name="portfolio"></a>
 <main class="container">
-      
-        <h1>MY PROJECTS</h1> 
-        <!-- begin slider-outer -->
-        <div class="slider-outer">
 
-            <img src="images/arrow-left.png" class="prev" alt="Previous">
+    <div class="slider-heading">
+        <h1>MY PROJECTS</h1>
+    </div>
+     
+    <div class="slider">
 
-            <div class="slider-inner">
-                <img src="images/space1.jpg" class="img active first">
-                <img src="images/space2.png" class="img">
-                <img src="images/space3.jpg" class="img">
-                <img src="images/blockchain.jpg" class="img last">
-            </div>
+        <div class="slide">
+                <img src="images/img1.jpg">
+        </div>
 
-            <img src="images/arrow-right.png" class="next" alt="Next">
+        <div class="slide">
+                <img src="images/img2.jpg">
+        </div>
 
-        </div>  
-        <!-- end of slider-outer -->
+        <div class="slide">
+                <img src="images/img3.jpg">
+        </div>
+
+    </div>
+
+    <div class="slider-nav">
+        <img src="images/arrow-left.png" id="prev" alt="Previous">
+        <img src="images/arrow-right.png" id="next" alt="Next">
+    </div>
+
+        
+
+    
+    
 
 </main>
 
@@ -90,59 +102,20 @@
 
     <div class="article-bottom">
 
-         <p class="quotes">
-            "1Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, 
-             consectetur, adipisci velit..."
-         </p>
-         <cite class="writer">"1Alex Rowland"</cite>
-
-         <p class="quotes">
-            "2Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, 
-             consectetur, adipisci velit..."
-         </p>
-         <cite class="writer">"2Alex Rowland"</cite>
-
-         <p class="quotes">
-            "3Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, 
-             consectetur, adipisci velit..."
-         </p>
-         <cite class="writer">"3Alex Rowland"</cite>
-
-    </div>
-
-    
-
-    <!-- <div class=".quotes">
-        <blockquote>
-         <p>
-          "1Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, 
-             consectetur, adipisci velit..."
+        <p class="quotes">
+           "I am going to make him an offer he can't refuse..."
         </p>
-        </blockquote>
-        <cite class="p1">"Alex Rowland"</cite>
-    </div>
-
-    <div class=".quotes">
-
-        <blockquote>
-          <p class="q1">"2Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, 
-             consectetur, adipisci velit..."
-          </p>
-        </blockquote>
-        <cite class="p1">"2Alex Rowland"</cite>
+        <cite class="writer">"The Godfather"</cite>
+        <p class="quotes">
+           "Go ahead, make my day"
+        </p>
+        <cite class="writer">"Dirty Harry"</cite>
+        <p class="quotes">
+           "You talking to me?"
+        </p>
+        <cite class="writer">"Taxi Driver"</cite>
 
     </div>
-
-    <div class=".quotes">
-
-            <blockquote>
-                  <p class="q1">"3Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, 
-                 consectetur, adipisci velit..."
-              </p>
-            </blockquote>
-            <cite class="p1">"3Alex Rowland"</cite>
-
-        </div> -->
 
 </article>
 
@@ -155,13 +128,13 @@
     <form id="f1">
         
         <label name="label1">Name</label>
-        <input type="text" name="name" placeholder="Name">
+        <input type="text" name="name" placeholder="Name" id="fname">
 
         <label name="label2">Email Address</label>
-        <input type="email" name="email" placeholder="Email Address">
+        <input type="email" name="email" placeholder="Email Address" id="femail">
 
         <label name="label3">Phone Number</label>
-        <input type="number" name="phone" placeholder="Phone Number">
+        <input type="number" name="phone" placeholder="Phone Number" id="fphone">
 
         <label name="label4">Message</label>
         <textarea name="message" placeholder="Message"></textarea>
