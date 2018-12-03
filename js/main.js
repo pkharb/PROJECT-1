@@ -1,71 +1,65 @@
 $(document).ready(function(){
-    
-
-    // FADE-IN, FADE-OUT FOR SLIDER IMAGES
-
-    // var imgShow = $(".img");
-    //     //console.log(quotes.length);
-    //     var imgIndex = -1;
-    
-    //     function showNextImg() {
-    //         ++imgIndex;
-    //         imgShow.eq(imgIndex % imgShow.length)
-    //             // .fadeIn(2000)
-    //             .slide(2000)
-    //             .delay(2000)
-    //             .slide(2000, showNextImg);
-    //     }
-    
-    //     showNextImg();
+    // SLIDER
+    var speed = 500;           //speed of fade
+    var autoSlide = true;       //auto slider option
+    var autoslide_speed = 4000; //auto slider speed
 
 
+    // add initial active class
+    $('.slide').first().addClass('active');
 
-    
-    // NAVIGATION FOR SLIDER IMAGES
-    var allImg = $('.img');
-    $('.next').on('click', function(){
-        
-        var firstImage = $('.first');
-        var currentImg = $('.active');
-       
-       if(currentImg[0] === allImg[allImg.length -1]){
-        
-            currentImg.removeClass('active').css('z-index', -10);
-            firstImage.addClass('active').css('z-index', 10);
-       }
-       else {
-        var nextImg = currentImg.next();
+    // hide all slides
+    $('.slide').hide();
 
-        if(nextImg.length){
-            currentImg.removeClass('active').css('z-index', -10);
-            nextImg.addClass('active').css('z-index', 10);
-            
+    // show first slide
+    $('.active').show();
+
+    $('#next').on('click', function(){
+        $('.active').removeClass('active').addClass('prevActive');
+
+        if($('.prevActive').is(':last-child')){
+            $('.slide').first().addClass('active');
         }
-       }
-    })
-    $('.prev').on('click', function(){
-
-        var lastImg = $('.first');
-        var currentImg = $('.active');
-        
-        
-
-        if(currentImg[0] === allImg[0]){
-            currentImg.removeClass('.active').css('z-index', -10);
-            //console.log(allImg[0]);
-            lastImg.addClass('.active').css('z-index', 10);
-            // debugger
+        else{
+            $('.prevActive').next().addClass('active');
         }
-        else {
-            // debugger
-        var prevImg = currentImg.prev();
+        $('.prevActive').removeClass('prevActive');
+        $('.slide').fadeOut(speed);
+        $('.active').fadeIn(speed);
+    
+    });
 
-        if(prevImg.length){
-            currentImg.removeClass('active').css('z-index', -10);
-            prevImg.addClass('active').css('z-index', 10);
+    $('#prev').on('click', function(){
+        $('.active').removeClass('active').addClass('prevActive');
+        //console.log($(".prevActive"));
+
+        if($('.prevActive').is(':first-child')){
+            $('.slide').last().addClass('active');
         }
+        else{
+            $('.prevActive').prev().addClass('active');
+        }
+        $('.prevActive').removeClass('prevActive');
+        $('.slide').fadeOut(speed);
+        $('.active').fadeIn(speed);
+    
+    });
+
+    if(autoSlide === true){
+        setInterval(function(){
+            $('.active').removeClass('active').addClass('prevActive');
+
+        if($('.prevActive').is(':last-child')){
+            $('.slide').first().addClass('active');
+        }
+        else{
+            $('.prevActive').next().addClass('active');
+        }
+        $('.prevActive').removeClass('prevActive');
+        $('.slide').fadeOut(speed);
+        $('.active').fadeIn(speed);
+        }, autoslide_speed);
     }
-    })
 
 
         var quotes = $(".quotes");
@@ -87,7 +81,7 @@ $(document).ready(function(){
     
         function showNextWriter() {
             ++writerIndex;
-            writer.eq(writerIndex % writer.length)
+            writer.eq(writerIndex % writer.length)  
                 .fadeIn(2000)
                 .delay(2000)
                 .fadeOut(2000, showNextWriter);
